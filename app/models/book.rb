@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class Book < ApplicationRecord
   def self.search(search)
-    search ? where(["name LIKE ?", "%#{search}%"]) : all 
+    search ? where(['name LIKE ?', "%#{search}%"]) : all
   end
 end
